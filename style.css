@@ -1,0 +1,326 @@
+/* EvaOS V0.6 — one conversation on paper. No panels. */
+:root {
+  --bg: #f3efe6;
+  --bg-top: #fbf8f2;
+  --ink: #1a1814;
+  --muted: #6a645a;
+  --line: #e2dcd0;
+  --sheet: #fffcf7;
+  --quiet: #8a8175;
+  --focus: #243f32;
+  --ok: #1e6b3f;
+  --fail: #8b2e2e;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 18px/1.45 Georgia, "Iowan Old Style", Palatino, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 50% -10%, var(--bg-top) 0%, var(--bg) 58%, #ebe4d6 100%);
+}
+
+.shell {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 36px 22px 72px;
+}
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 26px 22px;
+  box-shadow: 0 1px 2px rgba(26, 24, 20, 0.05);
+}
+
+.who {
+  font: 600 13px/1 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  margin: 0 0 16px;
+}
+
+.brief p {
+  margin: 0 0 0.85em;
+  font-size: 1.125rem;
+  line-height: 1.45;
+}
+
+.brief p:last-child { margin-bottom: 0; }
+
+.bar {
+  display: flex;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.bar input {
+  flex: 1;
+  min-width: 0;
+  font: 16px/1.35 system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.bar input:focus {
+  outline: 2px solid #c9ddd0;
+  border-color: var(--focus);
+}
+
+.bar button {
+  font: 600 15px/1 system-ui, -apple-system, sans-serif;
+  color: #f7f5f0;
+  background: var(--focus);
+  border: 1px solid var(--focus);
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bar button:hover { filter: brightness(1.08); }
+
+.bar button:focus-visible {
+  outline: 2px solid #c9ddd0;
+  outline-offset: 2px;
+}
+
+.bar button:disabled {
+  background: #eeeae2;
+  border-color: #c9c2b6;
+  color: #6d675e;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.ask-status {
+  font: 17px/1.4 Georgia, "Iowan Old Style", Palatino, serif;
+  margin: 12px 0 0;
+  min-height: 0;
+}
+
+.ask-status:empty { display: none; }
+
+.ask-status.got,
+.ask-status.working { color: var(--ink); }
+
+.ask-status.replied {
+  color: var(--ok);
+}
+
+.ask-status.failed { color: var(--fail); }
+
+.quiet-truth {
+  font: 13px/1.45 system-ui, -apple-system, sans-serif;
+  color: var(--quiet);
+  margin: 10px 0 0;
+}
+
+.turns { margin-top: 4px; }
+
+.turn { margin-top: 16px; }
+
+.turn.mine .said {
+  font: 16px/1.45 system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+.turn .state {
+  font: 16px/1.4 Georgia, "Iowan Old Style", Palatino, serif;
+  margin: 4px 0 0;
+}
+
+.turn .hint {
+  font: 13px/1.4 system-ui, -apple-system, sans-serif;
+  color: var(--fail);
+  margin: 4px 0 0;
+}
+
+.turn.hers {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.turn.hers .said {
+  font-size: 1.125rem;
+  line-height: 1.45;
+}
+
+.turn.hers .said p { margin: 0 0 0.6em; }
+.turn.hers .said p:last-child { margin-bottom: 0; }
+.turn.hers .said ul { margin: 0.4em 0 0; padding-left: 1.15em; }
+
+.turn.hers .context {
+  font: 13px/1.4 system-ui, -apple-system, sans-serif;
+  color: var(--quiet);
+  margin: 8px 0 0;
+}
+
+.load-note {
+  font: 13px/1.4 system-ui, -apple-system, sans-serif;
+  color: var(--quiet);
+  margin: 14px 0 0;
+}
+
+.dogfood {
+  margin-top: 26px;
+  font: 14px/1.45 system-ui, -apple-system, sans-serif;
+  color: var(--muted);
+}
+
+.dogfood summary {
+  cursor: pointer;
+  color: var(--muted);
+  padding: 4px 0;
+}
+
+.dogfood summary:focus-visible {
+  outline: 2px solid #c9ddd0;
+  border-radius: 4px;
+}
+
+.dogfood .body { margin-top: 8px; }
+
+.dogfood p { margin: 0 0 8px; }
+
+.dogfood .label {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+}
+
+.dogfood-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dogfood-form input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font: 15px/1.3 system-ui, -apple-system, sans-serif;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.dogfood-form input:focus {
+  outline: 2px solid #c9ddd0;
+  border-color: var(--focus);
+}
+
+.dogfood-form button {
+  font: 600 14px/1 system-ui, -apple-system, sans-serif;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dogfood-form button.save {
+  background: var(--focus);
+  color: #f7f5f0;
+  border: 1px solid var(--focus);
+}
+
+.dogfood-form button.clear {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.token-status {
+  font-size: 13px;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Atmosphere clock — upper-left, no hierarchy. Isolated from the conversation. */
+.eva-clock {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  width: 72px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+}
+
+.eva-clock .clock-face {
+  display: block;
+  width: 72px;
+  height: 72px;
+  filter: drop-shadow(0 1px 2px rgba(26, 24, 20, 0.12));
+}
+
+.eva-clock .clock-meta {
+  margin: 4px 0 0;
+  text-align: center;
+  font: 500 9px/1.25 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.eva-clock .clock-date { display: block; }
+
+.eva-clock .clock-tz {
+  display: block;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 8px;
+  opacity: 0.8;
+}
+
+@media (min-width: 1100px) {
+  .eva-clock { top: 22px; left: 22px; width: 84px; }
+  .eva-clock .clock-face { width: 84px; height: 84px; }
+}
+
+/* Keep the clock off the brief when the column would run into it. */
+@media (max-width: 960px) {
+  .eva-clock {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: 48px;
+    margin: 14px 0 0 18px;
+    opacity: 0.92;
+  }
+  .eva-clock .clock-face { width: 48px; height: 48px; }
+  .eva-clock .clock-meta { display: none; }
+  .shell { padding-top: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eva-clock { transition: none; }
+}
