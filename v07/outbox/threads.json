@@ -1,14 +1,92 @@
 {
   "version": "0.7",
-  "updated": "2026-10-02",
+  "updated": "2026-10-02T08:18-05:00",
   "note": "Dogfood replies for Helm v0.7 Objective Bay. Empty until a real reply is published here. Presence stays idle unless a real job is recorded. No secrets. This file does not draw a Mill floor.",
   "presence": [
-    { "id": "eva", "status": "idle" },
-    { "id": "delivery", "status": "idle" },
-    { "id": "auditor", "status": "idle" },
-    { "id": "client-success", "status": "idle" },
-    { "id": "growth", "status": "idle" }
+    {
+      "id": "eva",
+      "status": "idle"
+    },
+    {
+      "id": "delivery",
+      "status": "idle"
+    },
+    {
+      "id": "auditor",
+      "status": "idle"
+    },
+    {
+      "id": "client-success",
+      "status": "idle"
+    },
+    {
+      "id": "growth",
+      "status": "idle"
+    }
   ],
   "approves": [],
-  "threads": []
+  "threads": [
+    {
+      "intent_id": "UZ-FC-20261002-001",
+      "objective_id": "UZ-FC-20261002-001",
+      "status": "DONE",
+      "stage": "done",
+      "question": "OBJECTIVE: Determine the highest-leverage action to move EvaOS toward acquiring its first real paying customer. Challenge assumptions. Evidence on disk. No contact/spend/external publish/gate enable.",
+      "answer_text": "ONE action: close the dogfood evidence loop (B1 publisher flag-OFF + this UZ PoW). Prior objective before cash: prove Objective\u2192Evidence once \u2014 selling founding seats with an empty bay is theater. Next cash-adjacent (gated): ONE Approve to arm Helm founding-seat waitlist (design already on disk). No LL/Charles/Path2. paid_n=0.",
+      "answer_html": "<p><strong>ONE action:</strong> close the dogfood evidence loop (B1 publisher flag-OFF + this UZ PoW).</p><p><strong>Prior before cash:</strong> prove Objective\u2192Evidence once \u2014 empty-bay founding seats are theater.</p><p><strong>Next (gated):</strong> ONE Approve to arm Helm founding-seat waitlist. No LL/Charles/Path2. paid_n=0.</p>",
+      "answered_ct": "2026-10-02T07:15-05:00",
+      "kind": "objective",
+      "evidence": [
+        {
+          "title": "UZ-FC evidence packet (public mirror)",
+          "url": "https://raw.githubusercontent.com/Evaisawesome2025/evaos-v05/main/docs/evidence/UZ_FC_EVIDENCE_20261002.md",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "Atlas dogfood evidence publish contract (public mirror)",
+          "url": "https://raw.githubusercontent.com/Evaisawesome2025/evaos-v05/main/docs/evidence/ATLAS_DOGFOOD_EVIDENCE_PUBLISH_CONTRACT_20261002.md",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "Gage enable audit AUDIT-20261002-0814 (public mirror)",
+          "url": "https://raw.githubusercontent.com/Evaisawesome2025/evaos-v05/main/docs/evidence/AUDIT-20261002-0814-EVIDENCE-PUBLISH-ENABLE.md",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "Post-LL reorient memo EVIDENCE-LOOP-CLOSE (public mirror)",
+          "url": "https://raw.githubusercontent.com/Evaisawesome2025/evaos-v05/main/docs/evidence/EVAOS_REORIENT_POST_LL_20261002.md",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "PR #19 flag-OFF publisher (merged)",
+          "url": "https://github.com/Evaisawesome2025/evaos-v05/pull/19",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "PR #20 live dual-write gates (merged)",
+          "url": "https://github.com/Evaisawesome2025/evaos-v05/pull/20",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "Publisher FLAG.md (default OFF on tip)",
+          "url": "https://raw.githubusercontent.com/Evaisawesome2025/evaos-v05/main/scripts/dogfood_evidence_publisher/FLAG.md",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        },
+        {
+          "title": "Evidence mirrors commit e52d5da",
+          "url": "https://github.com/Evaisawesome2025/evaos-v05/commit/e52d5da9963b3745892144322b30c16b9d3db228",
+          "type": "https",
+          "opened_ct": "2026-10-02T08:18-05:00"
+        }
+      ]
+    }
+  ],
+  "updated_ct": "2026-10-02T08:18-05:00"
 }
