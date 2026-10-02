@@ -1,7 +1,7 @@
 {
   "version": "0.7",
-  "updated": "2026-10-02T08:26-05:00",
-  "note": "Dogfood replies for Helm v0.7 Objective Bay. a real reply is published here. Presence stays idle unless a real job is recorded. No secrets. This file does not draw a Mill floor.",
+  "updated": "2026-10-02T08:36-05:00",
+  "note": "Dogfood Objective Bay: terminal owner/objective replies with re-fetchable evidence when a record is published. Presence idle unless a real job is recorded. HELM_EVIDENCE_PUBLISH remains default OFF \u2014 not auto-publish. No secrets. Not a clean ship.",
   "presence": [
     {
       "id": "eva",
@@ -88,5 +88,5 @@
       ]
     }
   ],
-  "updated_ct": "2026-10-02T08:26-05:00"
+  "updated_ct": "2026-10-02T08:36-05:00"
 }
