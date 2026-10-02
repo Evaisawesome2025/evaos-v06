@@ -1,0 +1,14 @@
+{
+  "version": "0.7",
+  "updated": "2026-10-02",
+  "note": "Dogfood replies for Helm v0.7 Objective Bay. Empty until a real reply is published here. Presence stays idle unless a real job is recorded. No secrets. This file does not draw a Mill floor.",
+  "presence": [
+    { "id": "eva", "status": "idle" },
+    { "id": "delivery", "status": "idle" },
+    { "id": "auditor", "status": "idle" },
+    { "id": "client-success", "status": "idle" },
+    { "id": "growth", "status": "idle" }
+  ],
+  "approves": [],
+  "threads": []
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helm — EvaOS v0.7</title>
+<meta name="description" content="Helm is the owner surface for EvaOS: an organization that works a business for you. Objective Bay is owner dogfood. Not a stranger account. Not for sale.">
+<meta name="evaos-version" content="0.7">
+<meta name="theme-color" content="#f3efe6">
+<link rel="canonical" href="https://evaisawesome2025.github.io/evaos-v06/v07/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#bay">Skip to Objective Bay</a>
+<p class="nonclaims" role="note">
+  <strong>Non-claims.</strong>
+  This is Helm v0.7 dogfood, not a clean ship.
+  Not a stranger account. Not always on. Not for sale.
+  Stranger cash is $0. Guest DEMO is a different page.
+  Waitlist is not collecting. No checkout here.
+</p>
+<main class="shell">
+  <header class="brand-row">
+    <aside class="eva-clock" id="eva-clock" aria-label="Local time">
+      <svg class="clock-face" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#2c261e"/>
+        <circle cx="50" cy="50" r="44" fill="#f4ebe0"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#1a1814" stroke-width="0.6" opacity="0.35"/>
+        <g class="hand-hour"><path d="M48.7 54 L50 28 L51.3 54 Z" fill="#1a1814"/></g>
+        <g class="hand-minute"><path d="M49.2 55 L50 16 L50.8 55 Z" fill="#1a1814"/></g>
+        <g class="hand-second">
+          <line x1="50" y1="58" x2="50" y2="14" stroke="#8b2f24" stroke-width="0.8" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="1.5" fill="#8b2f24"/>
+        </g>
+        <circle cx="50" cy="50" r="2" fill="#2a241c"/>
+      </svg>
+      <p class="clock-meta"><span class="clock-date"></span><span class="clock-tz"></span></p>
+      <p class="clock-caption">Local time</p>
+    </aside>
+    <div class="brand-text">
+      <h1>Helm</h1>
+      <p>Joinermill · EvaOS v0.7</p>
+    </div>
+    <span class="chip later" title="Not built. Not a mode.">Game · LATER</span>
+  </header>
+
+  <p class="lede">Helm is the owner surface for an organization that works a business for you.</p>
+  <p>EvaOS is that organization. Joinermill is the company. You give an objective. The org does the daily work inside gates you set. You see the evidence. Send, spend, and publish wait for your yes.</p>
+  <p>This page is an early public reading. The home below is <strong>Objective Bay</strong>. It is owner dogfood. A stranger can look. A stranger cannot start a job from here.</p>
+  <p class="path">Discover → understand → see the idle bay → trust the zeros → leave → pay stays closed.</p>
+
+  <div class="compose-block">
+    <p class="compose-k" id="compose-label">Eva compose · DOGFOOD</p>
+    <div class="compose-row">
+      <div class="beat" id="org-heartbeat" data-state="idle" role="status" aria-label="Org heartbeat, idle, not spinning. Spins only when published work says the org is working.">
+        <span class="wheel" aria-hidden="true"></span>
+        <span class="beat-label" id="beat-label">Idle</span>
+      </div>
+      <form class="compose" id="compose-form" autocomplete="off">
+        <label class="sr-only" for="compose-input">Objective for Eva</label>
+        <input id="compose-input" type="text" maxlength="220" placeholder="What should the org do?" aria-labelledby="compose-label" required>
+        <button type="submit" id="compose-submit">Give objective</button>
+      </form>
+    </div>
+    <p class="compose-caption">Owner access code required. Without it, nothing is sent. The ring stays still unless published work says the org is working.</p>
+    <p class="ask-status" id="compose-status" aria-live="polite"></p>
+  </div>
+
+  <section class="sheet" id="bay" aria-labelledby="bay-title">
+    <p class="kicker">DOGFOOD · owner only · not a guest demo · not the Mill floor</p>
+    <h2 id="bay-title">Objective Bay</h2>
+    <p>One objective. The rail moves only when a real event is published. Evidence appears only when a reply or a link is published. Needs you appears only when an Approve packet is published. Idle looks idle.</p>
+
+    <div class="strip" id="objective-strip" aria-live="polite">
+      <p class="k">Objective</p>
+      <p id="objective-empty">No objective on this page.</p>
+      <div id="objective-current" hidden></div>
+    </div>
+
+    <ol class="rail" id="stage-rail">
+      <li class="stage" data-state="idle"><p class="k">Received</p><p class="note">No objective yet.</p></li>
+      <li class="stage" data-state="idle"><p class="k">Working</p><p class="note">Not working. Idle looks idle.</p></li>
+      <li class="stage" data-state="idle"><p class="k">Evidence</p><p class="note">No evidence published on this page.</p></li>
+      <li class="stage" data-state="idle"><p class="k">Needs you</p><p class="note">Nothing needs a yes.</p></li>
+    </ol>
+
+    <div class="block" id="evidence-block">
+      <h3>Evidence</h3>
+      <p id="evidence-empty">No evidence published on this page. A reply shows here only after it is published for this page. “Eva got it” can be true and this list can stay empty.</p>
+      <div id="evidence-list"></div>
+    </div>
+
+    <div class="block" id="needs-you">
+      <h3>Needs you</h3>
+      <p id="needs-empty">Nothing needs a yes. There is no Approve button, because there is no packet. An empty button would be theater.</p>
+      <div id="needs-list"></div>
+    </div>
+
+    <p class="quiet">I answer when I next work. I’m not waiting on this page.</p>
+    <p class="load-note quiet" id="load-note" hidden></p>
+
+    <details class="dogfood" id="token-setup">
+      <summary><span id="token-summary">DOGFOOD · access code</span></summary>
+      <div class="body">
+        <p><span class="label">DOGFOOD</span> access code. Not a secure login. Not a stranger account.</p>
+        <p><span class="label">DOGFOOD</span> browser storage. The code stays in this browser until you Clear.</p>
+        <p><span class="label">DOGFOOD</span> public replies. What is published on this page is public. Don’t put passwords or card numbers in an objective.</p>
+        <form class="dogfood-form" id="token-form" autocomplete="off">
+          <label class="sr-only" for="owner-token-input">Access code</label>
+          <input id="owner-token-input" type="password" maxlength="128" placeholder="Paste the code Eva gave you" spellcheck="false">
+          <button type="submit" class="save">Save</button>
+          <button type="button" id="clear-token" class="clear">Clear</button>
+        </form>
+        <p class="token-status" id="token-status" aria-live="polite"></p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="understand" aria-labelledby="understand-title">
+    <h2 id="understand-title">What you are looking at</h2>
+    <p>You are not hiring a chat window. Helm is a thin owner surface: an objective in, evidence out, consequential acts frozen until you approve them. Eva is the organization. She is not always on, and this page does not pretend she is watching it.</p>
+    <p>When a dogfood objective is accepted, the Received stage says so. Working lights only if the published status says the org is working. Evidence lights only if a reply or a link is published here. Needs you lights only for a real Approve packet.</p>
+  </section>
+
+  <section class="section" id="trust" aria-labelledby="trust-title">
+    <h2 id="trust-title">Trust</h2>
+    <p>What you can check on this page today. Zeros included. Latest published owner brief: 2026-09-30. This ship is 2026-10-02. The quiet watch in that brief runs until about Oct 13.</p>
+    <div class="board">
+      <article>
+        <h3>Works today</h3>
+        <ul>
+          <li>This public page</li>
+          <li>A plain account of Helm and EvaOS</li>
+          <li>Objective Bay, idle unless a real dogfood event is published here</li>
+          <li>A heartbeat that stays still while that status is idle</li>
+          <li>Local time, from this device</li>
+          <li>Dogfood objective send, for someone with the access code</li>
+          <li><a href="https://evaisawesome2025.github.io/listinglift/">ListingLift</a> — public page, $39, parked. Not evidence of an objective on this page. Nobody has paid.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Does not</h3>
+        <ul>
+          <li>A stranger account, or onboard without Glen</li>
+          <li>Sending a stranger’s objective</li>
+          <li>A guest demo inside this account</li>
+          <li>Waitlist capture</li>
+          <li>Checkout</li>
+          <li>A spinning heartbeat with no published work</li>
+          <li>A Mill floor, a game, or always-on Eva</li>
+          <li>A clean ship for strangers</li>
+        </ul>
+      </article>
+    </div>
+    <p>Stranger cash is $0. Zero customers. ListingLift’s page and the parked $39 offer are the public proof from that brief. Nothing in the brief needs a yes or no on the online business.</p>
+  </section>
+
+  <section class="section" id="try" aria-labelledby="try-title">
+    <h2 id="try-title">Try</h2>
+    <p>Look at the bay. It is empty on purpose. Type an objective if you want to see the field. Without the owner code, the page tells you nothing was sent, and the rail does not invent a plan.</p>
+    <p>A canned tour exists, and it stays outside this account forever: <a href="https://joinermill.com/app/guest/">Guest DEMO</a>. That tour is labeled DEMO. It is not Objective Bay, and it is not your job.</p>
+  </section>
+
+  <section class="section blocked" id="onboard" aria-labelledby="onboard-title">
+    <h2 id="onboard-title">Onboard without Glen — BLOCKED</h2>
+    <p>There is no account here that belongs to a stranger. No magic link. No signup. Glen’s dogfood code is not a login you can request from this page. When a second owner is invited, that will be a separate decision. This page does not collect an email.</p>
+  </section>
+
+  <section class="section" id="return" aria-labelledby="return-title">
+    <h2 id="return-title">Return</h2>
+    <p>Bookmark this URL. A stranger’s unsent words are not saved. The owner code, if saved, stays in this browser until Clear. A pending objective stays in this browser. A published reply stays on the page. Leaving does not create an account.</p>
+  </section>
+
+  <section class="section blocked" id="pay" aria-labelledby="pay-title">
+    <h2 id="pay-title">Pay — BLOCKED</h2>
+    <p>Joinermill has published a founding-seat intent of $49 a month or $490 a year. That number is not a price on this page. Helm is not for sale here. There is no charge, no cart, and no waitlist form. Paying waits until a real charge path exists and Glen opens it.</p>
+    <p>The public statement of that intent lives on <a href="https://joinermill.com/#pricing">Joinermill pricing</a>. Questions: <a href="mailto:hello@joinermill.com">hello@joinermill.com</a>.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2026 Joinermill · Helm · EvaOS v0.7 · Founder: Glen · operated by Eva under owner supervision.</p>
+    <p>Earlier owner pages, still up: <a href="https://evaisawesome2025.github.io/evaos-v05/">v0.5</a> · <a href="https://evaisawesome2025.github.io/evaos-v06/">v0.6</a>. Company site: <a href="https://joinermill.com/">joinermill.com</a>.</p>
+  </footer>
+</main>
+<script src="bay.js"></script>
+<script src="app.js"></script>
+<script src="clock.js"></script>
+</body>
+</html>
