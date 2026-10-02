@@ -15,3 +15,6 @@
 **Left alone:** v0.5 and v0.6 URLs. Joinermill Guest DEMO.
 
 Prove the live URL with HTTP 200 before calling the ship done. Details and the diff against v0.6 are in `BUILD.md`.
+
+## 2026-10-02 — ListingLift Trust relabel
+ListingLift public sell closed; Trust lines now say closed archived experiment. Not a clean-ship claim. Publisher still deferred.
