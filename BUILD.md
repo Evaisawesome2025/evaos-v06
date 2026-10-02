@@ -65,12 +65,12 @@ Carried from the working V0.5 ask loop, without its console:
 - “Eva is working on this” only if the published thread says so — no timer that pretends she has started
 - Quiet line, in her voice, not the status line: “I answer when I next work. I’m not waiting on this page.”
 - Paper palette and the small upper-left analog clock (`clock.js`, local time only)
-- Honest snapshot, 2026-09-30: $0 stranger cash, 0 customers, ListingLift $39 live, parked after the partner soft-intro, quiet watch until about Oct 13, no new cold email, searching for the next bet, nothing needs a yes or no on the online business
+- Honest snapshot, corrected 2026-10-02: $0 stranger cash, 0 customers, ListingLift closed and archived (not a live offer, not for sale), no new cold email, searching for the next bet, nothing needs a yes or no on the online business. The 2026-09-30 sales line for ListingLift is withdrawn on this live page.
 
 ## CHANGED
 
 - One sheet. Eva’s brief is the open. The message bar is the only second chrome, directly under her words.
-- Brief is 5 short lines, 72 words (cap 6 lines / 80 words). Order: nothing to authorize → $0 / ListingLift / next / nobody paid → what moved (partner note sent, active push stopped, page and checkout still up).
+- Brief is 5 short lines (cap 6 lines / 80 words). Order: nothing to authorize → $0 / ListingLift closed and archived / nobody paid → experiment closed, no new cold email → searching → what moved (closed 2026-10-02, archived, not for sale).
 - “Needs you” when clear lives only in her first line. No line above the bar, because nothing consequential is waiting.
 - Replies render in that same sheet, answer body first.
 - Storage keys are `evaos_v06_*`.
@@ -131,7 +131,7 @@ Do not point Pages at `evaos-v05`, and do not edit that repo.
 
 Glen, without coaching:
 
-1. **10 seconds.** From the brief and the bar only: nothing needs you; $0 / ListingLift $39 parked / watch to about Oct 13 / searching; what moved is the partner note and the stop of active push; message her in the bar. No manual, no second panel.
+1. **10 seconds.** From the brief and the bar only: nothing needs you; $0 / ListingLift closed and archived / searching; what moved is the 2026-10-02 close, archived, not for sale; message her in the bar. No manual, no second panel.
 2. **One relationship.** Talking to Eva, not operating a console.
 3. **Real message.** Not met until a write-path enable. The bar posts at the existing ask address and will show “Eva got it” only if that address accepts the send. A reply shows in this sheet only after it is published in this repo’s `outbox/threads.json`. That publisher was not changed. `origin_denied` stays an expected failure off the allowlist, and must not be patched in the Worker for this ship.
 4. **Truth.** No fake always-on line, no canned Eva reply, no invented dollars, no busywork counts. “Eva is working on this” is not shown on a timer.

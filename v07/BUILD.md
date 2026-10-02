@@ -5,7 +5,7 @@
 **Glen:** APPROVED folding Objective Bay into Helm v0.7 as **owner dogfood only** (Atlas CC-MVP).  
 **Page:** https://evaisawesome2025.github.io/evaos-v06/v07/  
 **Intended repo, not created:** `Evaisawesome2025/evaos-v07`  
-**Left intact:** https://evaisawesome2025.github.io/evaos-v06/ (root, unchanged) and https://evaisawesome2025.github.io/evaos-v05/
+**Left intact:** https://evaisawesome2025.github.io/evaos-v06/ (root stays the v0.6 sheet; ListingLift sentences corrected 2026-10-02) and https://evaisawesome2025.github.io/evaos-v05/
 
 Cost: $0. No spend. No secrets in git. No client-invented replies. This page does not claim Eva is always on, and it does not claim a clean ship.
 
@@ -54,7 +54,7 @@ Carried from the working ask loop, narrowed to one objective:
 - Poll this repo’s `outbox/threads.json`; drop a pending line when that file has the answer; hide self-test rows
 - Quiet line, in her voice: “I answer when I next work. I’m not waiting on this page.”
 - Local clock (`clock.js`), labeled local time, not an org signal
-- Honest business snapshot from the latest published owner brief (2026-09-30): stranger cash $0, zero customers, ListingLift $39 live and parked, nobody paid, quiet watch until about Oct 13, nothing needs a yes or no on the online business. This page does not invent a newer briefing.
+- Honest business snapshot, owner lock 2026-10-02: stranger cash $0, zero customers. ListingLift is a closed archived experiment (closed 2026-10-02). Not a live offer. Nobody paid. It is not evidence of an objective on this page, and this page does not link to it. Nothing needs a yes or no on the online business. Cash and customer zeros remain the 2026-09-30 brief. That brief’s ListingLift sales line is withdrawn.
 
 ## CHANGED
 
@@ -123,7 +123,7 @@ Intended host: a new repo `Evaisawesome2025/evaos-v07`, Pages from `main` `/`.
 
 That repo was not created. `POST /user/repos` returns 403. The response header asks for `repository_creation=write` (or `administration=write`). The core rate limit was not exhausted (thousands remaining). The install token’s repository list is only `Evaisawesome2025/evaos-v06`.
 
-This folder is therefore published inside that existing Pages site, which already deploys from `main` and already has a root `.nojekyll`. The v0.6 root files are not edited, so the v0.6 URL still serves v0.6. Helm is at `/v07/`.
+This folder is therefore published inside that existing Pages site, which already deploys from `main` and already has a root `.nojekyll`. The v0.6 URL still serves the v0.6 sheet. Helm is at `/v07/`. The only root edit in the 2026-10-02 ListingLift lock is the brief’s sales sentences.
 
 When a credential can create the repo: move this folder to `Evaisawesome2025/evaos-v07`, enable Pages on `main` `/`, and leave both older URLs up. Do not point v0.5 Pages at this folder.
 

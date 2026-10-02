@@ -102,10 +102,10 @@ test("presence working spins and an answered thread does not", function () {
     threads: [
       {
         kind: "objective",
-        question: "OBJECTIVE: Watch ListingLift",
+        question: "OBJECTIVE: Check the published note",
         status: "ANSWERED",
-        answer_text: "Page is up. Nobody has paid.",
-        evidence: [{ url: "https://evaisawesome2025.github.io/listinglift/", label: "ListingLift" }],
+        answer_text: "The note is up.",
+        evidence: [{ url: "https://evaisawesome2025.github.io/evaos-v06/v07/", label: "Helm note" }],
       },
     ],
     presence: [{ id: "eva", status: "idle" }],
@@ -115,7 +115,7 @@ test("presence working spins and an answered thread does not", function () {
   assert.equal(answered.heartbeat, "Idle");
   assert.equal(answered.stages[1].state, "idle");
   assert.equal(answered.stages[2].state, "published");
-  assert.equal(answered.evidence[0].links[0].href, "https://evaisawesome2025.github.io/listinglift/");
+  assert.equal(answered.evidence[0].links[0].href, "https://evaisawesome2025.github.io/evaos-v06/v07/");
 });
 
 test("selftest, closed approves, and unsafe links stay out of the bay", function () {
@@ -185,4 +185,8 @@ test("the page keeps the non-claims strip and does not arm stranger write", func
   assert.match(app, /OBJECTIVE: /);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(html, /BLOCKED/);
+  assert.match(html, /ListingLift — archived experiment \(closed 2026-10-02\)/);
+  assert.doesNotMatch(html, /github\.io\/listinglift/i);
+  assert.doesNotMatch(html, /parked/i);
+  assert.doesNotMatch(html, /\$39/);
 });

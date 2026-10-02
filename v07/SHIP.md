@@ -4,7 +4,7 @@
 
 **URL:** https://evaisawesome2025.github.io/evaos-v06/v07/
 
-`Evaisawesome2025/evaos-v07` was not created. The credential for this run cannot create repositories (`repository_creation=write` is required). v0.6’s root page was not edited. This folder is the public page.
+`Evaisawesome2025/evaos-v07` was not created. The credential for this run cannot create repositories (`repository_creation=write` is required). The v0.6 URL still serves the v0.6 sheet. On 2026-10-02 the ListingLift sentences in that brief were corrected so the live page does not keep a sales claim. This folder is the v0.7 page.
 
 **What a stranger gets:** a plain account of Helm, an idle Objective Bay, a heartbeat that is still, and an explicit list of what they cannot do (no account, no write, no waitlist, no pay).
 
@@ -12,9 +12,11 @@
 
 **Still blocked:** stranger onboard, Clerk, waitlist, public write, checkout.
 
-**Left alone:** v0.5 and v0.6 URLs. Joinermill Guest DEMO.
+**ListingLift:** closed archived experiment (2026-10-02). This page does not link to it, does not price it, and does not treat it as an offer.
+
+**Left alone:** v0.5 URL. Joinermill Guest DEMO. The v0.6 URL still serves the v0.6 sheet.
 
 Prove the live URL with HTTP 200 before calling the ship done. Details and the diff against v0.6 are in `BUILD.md`.
 
-## 2026-10-02 — ListingLift Trust relabel
-ListingLift public sell closed; Trust lines now say closed archived experiment. Not a clean-ship claim. Publisher still deferred.
+## 2026-10-02 — ListingLift closed archived experiment
+ListingLift public sell is closed. Trust names it as an archived experiment and does not link to it. Not a clean-ship claim. Publisher still deferred.
